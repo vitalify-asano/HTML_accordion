@@ -1,0 +1,39 @@
+html{
+    font-weight: bold;
+}
+
+details{
+    width: 500px;
+    margin: 0 auto;
+}
+
+summary{
+    padding: 24px 42px;
+    background-color: lightblue;
+    position: relative;
+}
+
+.menu{
+    padding: 20px 30px;
+    background-color: lightblue;
+}
+
+.menu div{
+    padding: 10px;
+    border: solid 1px gray;
+    background-color: #fff;
+}
+
+summary::after{
+    content: "+";
+    position: absolute;
+    top: 50%;
+    right: 30px;
+    transform: translate(0,-50%);
+    transition: 0.3s;
+    font-size: 20px;
+}
+
+details[open] summary::after{
+    transform: translateY(-50%) rotate(45deg);
+}
